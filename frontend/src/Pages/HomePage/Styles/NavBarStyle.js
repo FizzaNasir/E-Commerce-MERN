@@ -6,7 +6,7 @@ export const ParentStyle = {
     flexDirection: "column",
     color: "white",
     backgroundColor: "rgb(245, 86, 32)",
-    fontSize: "12px",
+    fontSize: "0.5rem",
 }
 
 export const NavbarStyle = {
@@ -14,7 +14,6 @@ export const NavbarStyle = {
     justifyContent: "space-evenly",
     alignItems: "center",
     paddingBottom: "1%",
-
 }
 
 export const flexContainer = {
@@ -77,9 +76,9 @@ export const SearchIconWrapper = styled('div')(({ theme }) => ({
       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
       transition: theme.transitions.create('width'),
       [theme.breakpoints.up('sm')]: {
-        width: '12ch',
+        width: '30%',
         '&:focus': {
-          width: '20ch',
+          width: '30%',
         },
       },
     },

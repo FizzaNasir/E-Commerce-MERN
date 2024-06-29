@@ -12,17 +12,14 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const NavBar = () => {
    return(
     <header style={ParentStyle}>
-       {/* <div style={highlights}> */}
        <Highlight>
             <p>Become a Seller</p>
             <p>Daraz Affiliate Program </p>
             <p>Help & Support</p>
-            <p> Daraz Logistics Partner</p>
-         {/* </div> */}
-         </Highlight>
+            <p>Daraz Logistics Partner</p>
+      </Highlight>
+      
       <div style={NavbarStyle}> 
-        
-         {/* <div> */}
             <img src="https://icms-image.slatic.net/images/ims-web/e650d6ca-1841-4646-b0e9-4ddbf2beb731.png" style={{width: "8%"}}></img>
             <Search>
                <SearchIconWrapper>
@@ -41,7 +38,6 @@ const NavBar = () => {
                <p>SignUp</p>
                <p>EN</p>
             <ShoppingCartOutlinedIcon/>
-          {/* </div> */}
       </div>
       </header>
    )
