@@ -39,11 +39,9 @@ return (
             {
                 data.map((item, index)=> (
                     <Box sx={CategoryStyle} onMouseEnter={()=>handleMouseEnter(item.subcategories)}>   
-                        <div > 
                             <Typography sx={{ fontSize: 14 }} key={index} color="text.secondary" gutterBottom>
                                 { item.name }
                             </Typography>
-                        </div>
                             <Box className="icon" sx={{display: 'none'}}><ChevronRightIcon/></Box>   
                     </Box>
                 ))      

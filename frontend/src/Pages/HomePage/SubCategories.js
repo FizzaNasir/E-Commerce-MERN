@@ -12,12 +12,15 @@ import {
   flexContainer,
   verticalLine,
   categoryImage,
+  SubCategoryStyle
 } from './Styles/CategoryStyle';
 
 const SubCategory = ({ Subcategories }) => {
   const [ishovered, setIsHovered] = useState(false);
   const [subcategories, setsubcategories] = useState([]);
 
+  
+  
   const handleMouseEnter = (item) => {
     console.log("subsubcategoriesfrom parent", item)
     let subcategories = [];
@@ -34,10 +37,10 @@ const SubCategory = ({ Subcategories }) => {
 
   return (
     <Box sx={parentSubCategoryCard} onMouseLeave={handleMouseLeave}>
-      <Card style={!ishovered ? card : null} sx={flexContainer}>
+      <Card style={!ishovered ? card : {...card, width: 950}} sx={flexContainer}>
         <CardContent>
             {Subcategories.map((item, index) => (
-                <Box sx={CategoryStyle} key={index} onMouseEnter={()=>handleMouseEnter(item[index].subsubcategories)}>
+                <Box sx={SubCategoryStyle} key={index} onMouseEnter={()=>handleMouseEnter(item[index].subsubcategories)}>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom >
                             {item[index].name}
                     </Typography>
@@ -47,6 +50,7 @@ const SubCategory = ({ Subcategories }) => {
                 </Box>
             ))}
         </CardContent>
+
         {ishovered && (
           <>
             <Box sx={verticalLine}></Box>
