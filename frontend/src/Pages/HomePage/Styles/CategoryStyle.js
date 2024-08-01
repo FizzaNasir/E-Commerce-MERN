@@ -3,7 +3,6 @@ export const CategoryStyle = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    // border: "1px solid red",
     '& .MuiTypography-root:hover, &:hover': {
         color: "rgb(245, 86, 32)",
         backgroundColor: "rgb(245,245,245)",
@@ -24,7 +23,7 @@ export const parentCategoryCard = {
 
 export const parentSubCategoryCard = {
     marginTop: 0,
-    marginLeft: 1,
+    marginLeft: 0.5,
     position: 'absolute', 
     top: 0, 
     left: '100%', 
@@ -36,11 +35,12 @@ export const card = {
     width: 250,
     borderRadius: 10,
     height: 320,
-    // border: "1px solid green",
 }
 
 export const extendableWidth = {
-    width: 800,
+    display: 'flex',
+    flexWrap: 'wrap',
+    width: '100%' 
 }
 
 export const flexContainer = {
@@ -66,19 +66,6 @@ export const categoryImage = {
 }
 
 export const SubCategoryStyle = {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    // border: "1px solid red",
-    width: 200,
-    '& .MuiTypography-root:hover, &:hover': {
-        color: "rgb(245, 86, 32)",
-        backgroundColor: "rgb(245,245,245)",
-        cursor: "pointer",
-    },
-
-    '&:hover .icon' : {
-        display: 'block'
-    },
+    ...CategoryStyle,
+    width: 200
 }

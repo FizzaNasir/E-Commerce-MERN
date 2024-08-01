@@ -4,14 +4,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Typography from '@mui/material/Typography';
-import { CategoryStyle, card } from './Styles/CategoryStyle';
+import { CategoryStyle, card, parentCategoryCard } from './Styles/CategoryStyle';
 import SubCategory from './SubCategories';
-import { parentCategoryCard } from './Styles/CategoryStyle';
 import { categories } from '../../jsonCategories';
-import { displayBlock } from './Styles/CategoryStyle';
-
-let categoriesdata = categories[0];
-let subscategories = categoriesdata[0]["subcategories"]
 
 const Category = ({data}) => {   
     
@@ -19,7 +14,6 @@ const [subcategories, setsubcategories] = React.useState([])
 const [ishovered, setIsHovered] = React.useState(false)
     
 const handleMouseEnter = (item) => {
-    console.log("subcategoriesfrom parent", item)
     let subcategories = [];
     for(let i = 0; i< item.length; i++){
         subcategories.push(item)
